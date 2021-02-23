@@ -1,18 +1,42 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    
+    <router-view></router-view>
+
+    <!-- <h3>Home</h3> -->
+    <!-- <button @click="toHome">Homeへもどる</button> -->
+
+    <transition name="fade">
+      <Footer v-if="show"></Footer>
+    </transition>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
+// import Main from './components/Main.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    // Header,
+    Footer,
+    // Main
+  },
+  data() {
+    return {
+      show: false
+    }
+  },
+  // method: {
+  //   toHome() {
+
+  //   }
+  // }
+  
+  
 }
 </script>
 
@@ -24,5 +48,34 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  padding-top: 60px;
+  width: 800px;
+  margin: auto; 
 }
+
+.link {
+  margin-right: 10px;
+  color: black;
+  font-size: 28px;
+}
+
+.link--active {
+  font-size: 36px;
+  color: blue;
+}
+
+main {
+  margin: 200px 0 400px;
+  font-size: 48px;
+  transition-duration: 0.3s;
+}
+
+main:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition-duration: 0.3s;
+}
+
+
+
 </style>
