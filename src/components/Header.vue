@@ -24,19 +24,16 @@
           >Comment</router-link>
         </nav>        
       </transition>
+
+      <hr>
         
     </div>
 </template>
 
-<style scoped>
-.link {
-  margin-right: 10px;
-  color: black;
-}
-
-.link--active {
-  font-size: 36px;
-  color: blue;
+<style>
+div {
+  margin-bottom: 100px;
 }
 
 </style>
+

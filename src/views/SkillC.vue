@@ -1,7 +1,6 @@
 <template>
     <div>
-        <h2>Skill03</h2>
-        <h3>webアプリケーション</h3>
+        <h1>webアプリケーション ~ Vue.js ~</h1>
         <div style="display: flex;">
             <div style="width:48%;">
                 <p>aaa</p>

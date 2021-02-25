@@ -1,23 +1,24 @@
 <template>
-    <div>
-        <p>copyright@2020 nagaiseiya</p>
-        <!-- <p>Home</p>
-        <p>About</p>
-        <p>Work</p>
-        <p>Skill</p>
-        <p>Comment</p> -->
-    </div>
+<div>
+    <!-- <div class="sns">
+        <p>T</p>
+        <p>G</p>
+    </div> -->
+    <p>copyright@2020 nagaiseiya</p>    
+</div>
 </template>
 
 <style scoped>
-div {
+.sns {
     display: flex;
-    margin-left: 300px;
-    font-size: 16px;
 }
 
-p {
-    padding-right: 10px;
+ div {
+    display: flex;
+    margin: 100px 0 20px;
+    width: 800px;
 }
-
+ p {
+     text-align: right;
+ }
 </style>

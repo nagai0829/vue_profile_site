@@ -1,5 +1,6 @@
 <template>
     <div>
+      
       <transition name="fade">
         <nav v-if="show" name="fade">
           <router-link
@@ -31,6 +32,7 @@
               @click.once="show = !show"
             >Welcome to my site</p>      
         </main>
+        
     </div>
 </template>
 

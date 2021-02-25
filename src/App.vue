@@ -3,38 +3,28 @@
     
     <router-view></router-view>
 
-    <!-- <h3>Home</h3> -->
-    <!-- <button @click="toHome">Homeへもどる</button> -->
-
-    <transition name="fade">
-      <Footer v-if="show"></Footer>
-    </transition>
-
   </div>
 </template>
 
 <script>
 // import Header from './components/Header.vue'
-import Footer from './components/Footer.vue'
+// import Footer from './components/Footer.vue'
 // import Main from './components/Main.vue'
+// import Button from './components/Button.vue'
 
 export default {
   name: 'App',
   components: {
+    // Button
     // Header,
-    Footer,
+    // Footer,
     // Main
   },
   data() {
     return {
       show: false
     }
-  },
-  // method: {
-  //   toHome() {
-
-  //   }
-  // }
+  }
   
   
 }
@@ -54,15 +44,18 @@ export default {
 }
 
 .link {
-  margin-right: 10px;
+  margin-right: 100px;
   color: black;
-  font-size: 28px;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 .link--active {
   font-size: 36px;
   color: blue;
 }
+
+
 
 main {
   margin: 200px 0 400px;
