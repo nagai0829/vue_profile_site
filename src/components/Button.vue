@@ -8,7 +8,7 @@
 
 <style scoped>
 button {
-  margin-top: 80px;
+  margin-bottom: 80px;
   color: #fff;
   background-color: #0066cc;
   border-bottom: 5px solid #0066cc;

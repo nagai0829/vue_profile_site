@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    
-    <router-view></router-view>
+    <transition mode="out-in">    
+      <router-view></router-view>
+    </transition>
 
   </div>
 </template>
@@ -43,21 +44,17 @@ export default {
   margin: auto; 
 }
 
-.link {
-  margin-right: 100px;
-  color: black;
-  font-size: 20px;
+a {
   text-decoration: none;
+  color: black;
 }
 
-.link--active {
-  font-size: 36px;
-  color: blue;
+a:hover {
+  opacity: 0.8;
 }
 
 
-
-main {
+/* main {
   margin: 200px 0 400px;
   font-size: 48px;
   transition-duration: 0.3s;
@@ -67,8 +64,18 @@ main:hover {
   cursor: pointer;
   transform: scale(1.2);
   transition-duration: 0.3s;
+} */
+
+.view-enter-active, .view-leave-active {
+  transition: opacity .3s;
 }
 
+/* .view-leave-active {
+  position: absolute;
+} */
 
+.view-enter, .view-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 
 </style>

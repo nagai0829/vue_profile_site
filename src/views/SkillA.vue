@@ -25,13 +25,10 @@ img {
     height: 200px;
 }
 
-h1 {
-    margin-top: 50px;
-}
-
 a {
-    width: 45%;
-    margin-right: 10px;
+    width: 48%;
+    margin-right: 20px;
+    text-decoration: none;
 }
 
 a img:hover {
@@ -39,5 +36,13 @@ a img:hover {
   transform: scale(1.1);
   transition-duration: 0.6s;
 }
+
+
+h1 {
+    background: linear-gradient(transparent 0, #8effa1 0);
+    margin-bottom: 60px;
+    padding: 5px 0;
+}
+
 
 </style>

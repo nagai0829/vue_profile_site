@@ -3,6 +3,9 @@
       
       <transition name="fade">
         <nav v-if="show" name="fade">
+          <a href="/" class="link02">
+            NAGALOG
+          </a>
           <router-link
             to="/about"
             active-class="link--active"
@@ -26,18 +29,30 @@
         </nav>
         
       </transition>
-        <main> 
-            <p
-              v-if="!show"
-              @click.once="show = !show"
-            >Welcome to my site</p>      
-        </main>
-        
+      <main> 
+        <p v-if="!show"
+          @click.once="show = !show"
+          class="main"
+          >Welcome to my site</p>      
+        <p v-else>
+          <router-link to="/about">
+            <img src="@/assets/img/home1.png" class="main" alt="">
+          </router-link>
+          <router-link to="/skill">
+            <img src="@/assets/img/home2.png" class="main" alt="">
+          </router-link>
+          <router-link to="/comment">
+            <img src="@/assets/img/home3.png" class="main" alt="">
+          </router-link>
+        </p>
+      </main>        
     </div>
 </template>
 
 <script>
 import Header from '../components/Header.vue'
+import { db } from '../main'
+import Vue2Filters from 'vue2-filters' 
 
 export default {
     component: {
@@ -46,34 +61,61 @@ export default {
     },
     data() {
         return {
-        show: false
+        show: false,
+        whispers: []
         }
     },
+    firestore () {
+    return {
+      whispers: db.collection('whispers')
+    }
+  },
     methods: {
         toUsers() {
             this.$router.push('about');
         }
-    }
+    },
+    mixins: [Vue2Filters.mixin] 
 }
 </script>
 
 <style scoped>
-main {
+.main {
   margin: 200px 0 400px;
   font-size: 48px;
   transition-duration: 0.3s;
 }
 
-main:hover {
+.main:hover {
   cursor: pointer;
   transform: scale(1.2);
   transition-duration: 0.3s;
+}
+
+.link {
+  margin-right: 60px;
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.link--active {
+  /* font-size: 36px; */
+  color: blue;
 }
 
 .link:hover {
   cursor: pointer;
   transform: scale(1.2);
   transition-duration: 0.3s;
+}
+
+.link02 {
+  margin-right: 160px;
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  cursor: default;
 }
 
 .fade-enter-active, .fade-leave-active {
